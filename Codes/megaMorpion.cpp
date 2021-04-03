@@ -23,7 +23,7 @@ struct item
 	int y;
 };
 
-//ensemble des données de la taille de la fenêtre
+//ensemble des donnÃ©es de la taille de la fenÃªtre
 int sizeH = display.getWinH();
 int sizeW = display.getWinW();
 int size_big_tileH = sizeH / 3 - sizeH / 30;
@@ -49,7 +49,7 @@ void testPos(item& cursor, int cursor_mode, item old_pos) //updateCursor -> corr
 	}
 }
 
-void getPos(item& cursor) //updateCursor -> récupère la position du curseur
+void getPos(item& cursor) //updateCursor -> rÃ©cupÃ¨re la position du curseur
 {
 	cursor.x = input.getMousePos()[0] / (sizeW / 9);
 	cursor.y = input.getMousePos()[1] / (sizeH / 9);
@@ -61,7 +61,7 @@ void updateCursor(item& cursor, int cursor_mode) { //met a jour l'emplacement du
 	testPos(cursor, cursor_mode, old_pos);
 }
 
-bool canPlay(matrixC& board, item& cursor, matrixC& win_board) //vérifie que le curseur est dans une case jouable et que la souris est bien placée
+bool canPlay(matrixC& board, item& cursor, matrixC& win_board) //vÃ©rifie que le curseur est dans une case jouable et que la souris est bien placÃ©e
 {
 	if (input.getMousePos()[0] / (sizeW / 9) != cursor.x || input.getMousePos()[1] / (sizeH / 9) != cursor.y)
 		return false;
@@ -101,7 +101,7 @@ bool can_display(matrixC& board, item& cursor, matrixC& win_board) //display_scr
 
 void display_screen(matrixC board, item cursor, char turn, int cursor_mode, matrixC win_board) //gestion de l'affichage de la fenetre
 {
-	display.clearScreen(); // "Nettoie" la fenêtre
+	display.clearScreen(); // "Nettoie" la fenÃªtre
 
 	if (cursor_mode == 0) { // fond de couleur quand on joue global
 		for (int i = 0; i < 3; i++) {
@@ -164,7 +164,7 @@ void display_screen(matrixC board, item cursor, char turn, int cursor_mode, matr
 		putCursor(sizeW / 3 * (cursor.x / 3) + sizeW / 60 + size_big_tileW / 3 * (cursor.x % 3) + size_big_tileW / 60, 
 			      sizeH / 3 * (cursor.y / 3) + sizeH / 60 + size_big_tileH / 3 * (cursor.y % 3) + size_big_tileH / 60); //curseur
 	
-	display.refreshScreen(); // Rafraîchit la fenêtre
+	display.refreshScreen(); // RafraÃ®chit la fenÃªtre
 
 }
 
