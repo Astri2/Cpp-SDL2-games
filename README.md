@@ -1,5 +1,7 @@
 # Cpp-SDL2-games
 
 A few games made in C++ with a modified version of the SDL2 library.
-You should be able to execute them just by downloading the releases folder.
-They are my first projects and there are a lot of ugly things in the code
+
+To play them, you will have to download the release folder and execute the .exe file of the game you want to play.
+The .dll may be useless if you already have them.
+You will also need the Visual C++ Redistributable. You can download it here : https://www.microsoft.com/en-gb/download/details.aspx?id=48145
